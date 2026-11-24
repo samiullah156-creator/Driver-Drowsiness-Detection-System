@@ -1,0 +1,51 @@
+# ====================================================================
+# DRIVER DROWSINESS DETECTION SYSTEM — REQUIREMENTS
+# FYP I · KFUEIT 2026
+# ====================================================================
+# INSTALLATION:
+#   python -m venv .venv
+#   .venv\Scripts\activate          # Windows
+#   source .venv/bin/activate       # Linux / macOS
+#   pip install -r requirements.txt
+#
+# TROUBLESHOOTING:
+#   dlib install fails on Windows → install cmake first:
+#       pip install cmake
+#       pip install dlib
+#   macOS: xcode-select --install
+#   Linux: sudo apt-get install cmake libopenblas-dev liblapack-dev
+# ====================================================================
+
+# ---- Computer vision & image processing --------------------------------
+opencv-python>=4.8.0,<5.0.0
+
+# ---- Facial landmark detection -----------------------------------------
+# Optional but strongly recommended for accurate EAR.
+# If dlib fails to install, the system falls back to Haar cascade mode.
+dlib>=19.22.0,<20.0.0
+
+# ---- Numerical / mathematical ------------------------------------------
+numpy>=1.24.0,<2.1.0
+scipy>=1.10.0,<2.0.0
+
+# ---- Audio (alarm) -----------------------------------------------------
+# Windows: uses built-in winsound — playsound only needed on Linux/macOS
+playsound>=1.2.2,<2.0.0
+
+# ---- Streamlit web dashboard -------------------------------------------
+streamlit>=1.32.0,<2.0.0
+streamlit-webrtc>=0.47.0,<1.0.0
+
+# ---- WebRTC / media processing (required by streamlit-webrtc) ----------
+av>=11.0.0
+
+# ---- PWA assets / icon generation --------------------------------------
+Pillow>=10.0.0,<12.0.0
+
+# ---- MediaPipe (optional — for PWA variant streamlit_app_pwa.py) -------
+# mediapipe>=0.10.14,<0.11.0
+
+# ====================================================================
+# Python version: 3.9 – 3.12  (tested on 3.11)
+# Operating systems: Windows 10/11 · macOS 12+ · Ubuntu 20.04+
+# ====================================================================
